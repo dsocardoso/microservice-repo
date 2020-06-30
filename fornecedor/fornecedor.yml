@@ -2,7 +2,13 @@ spring:
   datasource:
     password: admin
     username: admin
+    driver-class-name: 'org.postgresql.Driver'
     url: 'jdbc:postgresql://localhost:5432/fornecedor'
   jpa:
+    properties:
     hibernate:
       ddl-auto: update
+      dialect: 'org.hibernate.dialect.PostgreSQLDialect'
+      show_sql: true
+      format_sql: true
+      
